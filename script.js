@@ -192,7 +192,7 @@ function handleOutputMouseWheel(e) {
     circle.radius += e.deltaY > 0 ? -5 : 5;
 
     // 半径の最小値と最大値を制限
-    circle.radius = Math.max(10, Math.min(300, circle.radius));
+    circle.radius = Math.max(10, Math.min(600, circle.radius));
 
     drawOutputPointsAndCircle(); // 円を再描画
     updateCircleRadiusDisplay(); // 半径を更新
