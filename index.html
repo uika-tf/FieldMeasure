@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>フィールド計測ツール</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .canvas-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        canvas {
+            border: 1px solid #000;
+        }
+
+        .controls {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="canvas-container">
+        <canvas id="inputCanvas" width="600" height="600"></canvas>
+        <canvas id="outputCanvas" width="600" height="600"></canvas>
+    </div>
+
+    <div class="controls">
+        <label>
+            画像の一辺の長さ (メートル):
+            <input type="number" id="sideLengthInput" placeholder="例: 10" step="0.1">
+        </label>
+        <label>
+            2点間の距離: <span id="distanceDisplay">-</span> メートル
+        </label>
+        <label>
+            現在の円の半径: <span id="circleRadiusDisplay">-</span> メートル
+        </label>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
